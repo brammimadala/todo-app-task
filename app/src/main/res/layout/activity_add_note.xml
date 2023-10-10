@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/purple_500">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_back"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="@string/add_task"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/taskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout_view"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/title"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@+id/taskTitle"
+        app:layout_constraintStart_toStartOf="@+id/taskTitle"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6sp"
+        android:background="@drawable/round_border_bg"
+        android:textAlignment="viewStart"
+        android:imeOptions="actionNext"
+        android:textCursorDrawable="@null"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/taskDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteTitle"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/description"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/noteDescription"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskDescription"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_border_bg"
+        android:textCursorDrawable="@null"
+        android:imeOptions="actionNext"
+        android:padding="20dp"
+        android:gravity="top"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addTodoTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/noteDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16sp"
+        android:textAllCaps="false"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
